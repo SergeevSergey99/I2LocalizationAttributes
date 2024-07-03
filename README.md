@@ -1,4 +1,5 @@
-# I2LocalizationModifications
+# I2LocalizationAttributes
+
 
 This repository contains custom modifications and utilities for the [I2 Localization plugin](https://assetstore.unity.com/packages/tools/localization/i2-localization-14884) in Unity. It provides attributes and property drawers for easier selection and management of localization terms and categories within the Unity editor.
 
