@@ -9,8 +9,9 @@ This repository contains custom modifications and utilities for the [I2 Localiza
 
 ## Installation
 
-1. Clone or download this repository.
-2. Add the files to your Unity project.
+1. Install [I2 Localization plugin](https://assetstore.unity.com/packages/tools/localization/i2-localization-14884)
+2. Clone or download this repository.
+3. Add the files to your Unity project.
 
 ## Usage
 
@@ -29,4 +30,38 @@ public class LocalizedText : MonoBehaviour
 }
 ```
 My Terms looks like this:
-![My Terms](Images/Terms.png)
+
+![Terms](Images/Terms.png)
+
+So my options are:
+
+![Example1](Images/Example1.png)
+
+### LocalizationCategoryAttribute
+
+Use the `LocalizationCategoryAttribute` to specify a localization category for a property.
+
+
+```csharp
+using I2.Loc;
+using UnityEngine;
+
+public class LocalizedTextWithCategory : MonoBehaviour
+{
+    [LocalizationCategory("UI")]
+    public LocalizedCategory category;
+    [LocalizationPath("$category")]
+    public I2.Loc.LocalizedString localizedString;
+    
+}
+```
+
+As result it shows only the terms from the specified category:
+
+![Categories](Images/Example2_1.png)
+
+![Example2](Images/Example2_2.png)
+
+### Extra
+
+You can also use both attributes with a string or reference to parameter/method to specify a path directly.
